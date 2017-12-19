@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EchoFeel LMS</title>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Welcome to EchoFeel LMS</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Blocked</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-users"></i>
+                        <span class="nav-link-text">Open</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-area-chart"></i>
+                        <span class="nav-link-text">Follow-Up</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span class="nav-link-text">Multiple Domain</span>
+                    </a>
+                </li>
+                                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-times-rectangle-o"></i>
+                        <span class="nav-link-text">Closed</span>
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" >
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Block Lead</a>
+                </li>
+
+            </ol>
+
+
+            <p>Date Range</p>
+            <a class="btn btn-primary mtp10 " href="#">Today</a>
+            <a class="btn btn-primary mtp10 " href="#">Last 1 week</a>
+            <a class="btn btn-primary mtp10 " href="#">Last 1 month</a>
+
+            <p></p>
+
+
+
+            <div class="row">
+            
+
+                   <div class="col-md-auto">
+                    <label>Search :</label>
+                    </div>
+                <div class="col-md-auto">
+                    <input class="form-control" />
+                    </div>
+                 <div class="col-md-auto">
+                       <div class="dataTables_length">
+                   
+                            <select name="dataTable_length" aria-controls="dataTable" class="form-control">
+                                <option value="">Company Name</option>
+                                <option value="">Lead Source</option>
+                                   <option value="">City</option>
+                                   <option value="">Assigned To</option>
+                                   <option value="">Domain Name</option>
+                                   <option value="">Mobile No</option>
+                                   <option value="">Contact Person</option>
+                             
+                            </select>
+                          </div>
+                </div>
+</div>
+            <p></p>
+                <div class="row">
+
+                <div class="col-md-auto">
+                     <a class="btn btn-primary mtp10" href="#">Block Lead</a>
+                     </div>
+
+
+                  <div class="col-md-auto">
+                     <a class="btn btn-primary mtp10 " href="#">Delete lead</a>
+
+                     </div>
+
+
+            </div>
+
+            <p></p>
+            <div class="row">
+                <div class="col-md-auto">
+                    <label>Choose Fields:</label>
+                    </div>
+          <div class="col-md-auto">
+                       <div class="dataTables_length">
+                  <div class="button-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Select<span class="caret"></span></button>
+<ul class="dropdown-menu">
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Lead No</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Domain Name</a></li>
+    <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Company Name</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Mobile No</a></li>
+      <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Landline No</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Email ID</a></li>
+      <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Address</a></li>
+
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Date Created</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Lead Source</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Lead Generator</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Country</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;City</a></li>
+
+  <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Contact Person</a></li>
+
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Assigned To</a></li>
+<li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Entered by</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Status</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Latest Comment</a></li>
+
+
+</ul>
+  </div>
+                          </div>
+                </div>
+
+
+                                 </div>
+            <p></p>
+      
+            <!-- Example DataTables Card-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-table"></i> &nbsp; Lead Status
+                </div>
+                <div class="card-body">
+
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox"></th>
+                                    <th>Lead No</th>
+                                     <th>Domain Name</th>
+                                    <th>Company Name</th>
+                                
+                                    <th>Mobile No</th>
+                                        <th>Landline No</th>
+                                    <th>Email ID</th>
+                                
+                                    <th>Date Created</th>
+                                       <th>Lead Source</th>
+                                    <th>Lead Generator</th>
+                                    <th>Country</th>
+                                    <th>City</th>
+                                    
+                                    <th>Contact Person</th>
+                                    <th>Address</th>
+                                    
+                                    
+                                    <th>Assigned To</th>
+                                    <th>Entered by</th>
+                                    <th>Status</th>
+                                    <th>Latest Comment</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                
+                                
+                              <tr>
+                                      <td><input type="checkbox"></td>
+                                    <td>LN1</td>
+                                      <td>academy.com</td>
+                                
+                                   <td>Achiever's Academy</td>
+                                    <td>98213 46220</td>
+                                     <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                   <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                               
+                                    <td>05-12-2017</td>
+                                       <td>Just Dial</td>
+                                    <td></td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                   
+                                    <td>Mehul Shah</td>
+                                   
+                                 
+                                    
+                                     <td>Sheetal</td>
+                                     <td>Sheetal</td>
+                                     <td>Blocked</td>
+                                     <td>Follow-up</td>
+                                </tr>
+                             <tr>
+                                      <td><input type="checkbox"></td>
+                                    <td>LN2</td>
+                                      <td>academy.com</td>
+                                
+                                   <td>Achiever's Academy</td>
+                                    <td>98213 46220</td>
+                                     <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                   <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                               
+                                    <td>05-12-2017</td>
+                                       <td>Just Dial</td>
+                                    <td></td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                   
+                                    <td>Mehul Shah</td>
+                                   
+                                 
+                                    
+                                     <td>Sheetal</td>
+                                     <td>Sheetal</td>
+                                     <td>Blocked</td>
+                                     <td>Follow-up</td>
+                                </tr>
+
+
+                                 <tr>
+                                      <td><input type="checkbox"></td>
+                                    <td>LN3</td>
+                                      <td>academy.com</td>
+                                
+                                   <td>Achiever's Academy</td>
+                                    <td>98213 46220</td>
+                                     <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                   <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                               
+                                    <td>05-12-2017</td>
+                                       <td>Just Dial</td>
+                                    <td></td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                   
+                                    <td>Mehul Shah</td>
+                                   
+                                 
+                                    
+                                     <td>Sheetal</td>
+                                     <td>Sheetal</td>
+                                     <td>Blocked</td>
+                                     <td>Follow-up</td>
+                                </tr>
+
+
+                                 <tr>
+                                      <td><input type="checkbox"></td>
+                                    <td>LN4</td>
+                                      <td>academy.com</td>
+                                
+                                   <td>Achiever's Academy</td>
+                                    <td>98213 46220</td>
+                                     <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                   <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                               
+                                    <td>05-12-2017</td>
+                                       <td>Just Dial</td>
+                                    <td></td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                   
+                                    <td>Mehul Shah</td>
+                                   
+                                 
+                                    
+                                     <td>Sheetal</td>
+                                     <td>Sheetal</td>
+                                     <td>Blocked</td>
+                                     <td>Follow-up</td>
+                                </tr>
+
+
+                                 <tr>
+                                      <td><input type="checkbox"></td>
+                                    <td>LN5</td>
+                                      <td>academy.com</td>
+                                
+                                   <td>Achiever's Academy</td>
+                                    <td>98213 46220</td>
+                                     <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                   <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                               
+                                    <td>05-12-2017</td>
+                                       <td>Just Dial</td>
+                                    <td></td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                   
+                                    <td>Mehul Shah</td>
+                                   
+                                 
+                                    
+                                     <td>Sheetal</td>
+                                     <td>Sheetal</td>
+                                     <td>Blocked</td>
+                                     <td>Follow-up</td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+                
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © EchoFeel 2017</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    
+        
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Page level plugin JavaScript-->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+        <script src="vendor/datatables/jquery.dataTables.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin.min.js"></script>
+        <!-- Custom scripts for this page-->
+        <script src="js/sb-admin-datatables.min.js"></script>
+        <script src="js/sb-admin-charts.min.js"></script>
+        <script type="text/javascript">
+
+            var options = [];
+
+            $(".dropdown-menu a").on("click", function (event) {
+                var $target = $(event.currentTarget),
+                  val = $target.attr("data-value"),
+                  $inp = $target.find("input"),
+                  idx;
+
+                if ((idx = options.indexOf(val)) > -1) {
+                    options.splice(idx, 1);
+                    setTimeout(function () {
+                        $inp.prop("checked", false);
+                    }, 0);
+                } else {
+                    options.push(val);
+                    setTimeout(function () {
+                        $inp.prop("checked", true);
+                    }, 0);
+                }
+
+                $(event.target).blur();
+
+                console.log(options);
+                return false;
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>

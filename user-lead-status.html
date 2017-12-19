@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>EchoFeel LMS</title>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">Welcome to EchoFeel LMS</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-dashboard"></i>
+                        <span class="nav-link-text">Blocked</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-users"></i>
+                        <span class="nav-link-text">Open</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-area-chart"></i>
+                        <span class="nav-link-text">Follow-Up</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span class="nav-link-text">Multiple Domain</span>
+                    </a>
+                </li>
+                                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-times-rectangle-o"></i>
+                        <span class="nav-link-text">Closed</span>
+                    </a>
+                </li>
+
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item">
+                    <a class="nav-link" >
+                        <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- Breadcrumbs-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">User Lead Status</a>
+                </li>
+
+            </ol>
+
+
+            <p>Date Range</p>
+            <a class="btn btn-primary mtp10 " href="#">Today</a>
+            <a class="btn btn-primary mtp10 " href="#">Last 1 week</a>
+            <a class="btn btn-primary mtp10 " href="#">Last 1 month</a>
+             <a class="btn btn-primary mtp10 " href="block-lead.html">Block Lead</a>
+            <p></p>
+
+
+
+            <div class="row">
+   
+
+                   <div class="col-md-auto">
+                    <label>Search :</label>
+                    </div>
+                       <div class="col-md-auto">
+                    <input class="form-control" />
+                    </div>
+                 <div class="col-md-auto">
+                       <div class="dataTables_length">
+                   
+                            <select name="dataTable_length" aria-controls="dataTable" class="form-control">
+                                <option value="">Company Name</option>
+                             
+                                   <option value="">City</option>
+                           
+                                   <option value="">Domain Name</option>
+                                   <option value="">Mobile No</option>
+                                   <option value="">Contact Person</option>
+                             
+                            </select>
+                          </div>
+                </div>
+
+                <div class="col-md-auto">
+                     <a class="btn btn-primary mtp10" href="add-new-user-lead.html">Add New User Lead</a>
+                     </div>
+
+
+              
+            </div>
+
+            <p></p>
+               <div class="row">
+                <div class="col-md-auto">
+                    <label>Choose Fields:</label>
+                    </div>
+          <div class="col-md-auto">
+                       <div class="dataTables_length">
+                  <div class="button-group">
+        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">Select<span class="caret"></span></button>
+<ul class="dropdown-menu">
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Lead No</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Domain Name</a></li>
+    <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Company Name</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Mobile No</a></li>
+      <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Landline No</a></li>
+     <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Email ID</a></li>
+      <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Address</a></li>
+
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Date Created</a></li>
+
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Country</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;City</a></li>
+
+  <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Contact Person</a></li>
+
+
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Status</a></li>
+ <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp;Latest Comment</a></li>
+
+</ul>
+  </div>
+                          </div>
+                </div>
+
+
+                                 </div>
+            <p></p>
+      
+            <!-- Example DataTables Card-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <i class="fa fa-table"></i> &nbsp; User Lead Status
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                           <th><input type="checkbox"></th>
+                                    <th>Lead No</th>
+                             <th>Domain Name</th>
+                                        <th>Company Name</th>
+                                     <th>Mobile No</th>
+                                    <th>Landline No</th>
+                                   
+                                     <th>Email ID</th>
+                                      <th>Address</th>
+                                    <th>Date Created</th>
+                               
+                                    <th>Country</th>
+                                    <th>City</th>
+                                
+                                    <th>Contact Person</th>
+                                  
+                                    
+                                   
+                                    <th>Status</th>
+                                    <th>Latest Comment</th>
+                                     <th>Action</th>
+                                    
+                                   
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                
+                                
+                              <tr> <td><input type="checkbox"></td>
+                                    <td>LN1</td>
+                                   <td>academy.com</td>
+                                   <td>Achiever's Academy</td>
+                                   <td>98213 46220</td>
+                                  <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                    <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                                   <td>05-12-2017</td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                     <td>Mehul Shah</td>
+                                  <td>Blocked</td>
+                                     <td>Ringing</td>
+                                     <td> <a  class="btn btn-primary lnk" data-toggle="modal" data-target="#exampleModal">Edit</a></td>
+                                    
+                                </tr>
+
+                                 <tr> <td><input type="checkbox"></td>
+                                    <td>LN2</td>
+                                   <td>academy.com</td>
+                                   <td>Achiever's Academy</td>
+                                   <td>98213 46220</td>
+                                  <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                    <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                                   <td>05-12-2017</td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                     <td>Mehul Shah</td>
+                                  <td>Blocked</td>
+                                     <td>Ringing</td>
+                                     <td> <a  class="btn btn-primary lnk" data-toggle="modal" data-target="#exampleModal">Edit</a></td>
+                                    
+                                </tr>
+
+                                 <tr> <td><input type="checkbox"></td>
+                                    <td>LN3</td>
+                                   <td>academy.com</td>
+                                   <td>Achiever's Academy</td>
+                                   <td>98213 46220</td>
+                                  <td>022 2433 0121</td>
+                                   <td>mehul@academy.com</td>
+                                    <td>112, United Industrial Estate, Mogul Lane, Mahim, Mumbai 400016</td>
+                                   <td>05-12-2017</td>
+                                    <td>India</td>
+                                    <td>Mumbai</td>
+                                     <td>Mehul Shah</td>
+                                  <td>Blocked</td>
+                                     <td>Ringing</td>
+                                     <td> <a  class="btn btn-primary lnk" data-toggle="modal" data-target="#exampleModal">Edit</a></td>
+                                    
+                                </tr>
+                             
+            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+        </div>
+        <!-- /.container-fluid-->
+        <!-- /.content-wrapper-->
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © EchoFeel 2017</small>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Action</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">    
+              <form>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-12">
+                <label>Followup Date</label>
+               <input class="form-control" type="text">
+              </div>
+                    <div class="col-md-12">
+                <label>Email-Id</label>
+                <input class="form-control" type="text">
+              </div>
+              <div class="col-md-12">
+                <label>Status</label>
+                <select class="form-control">
+
+                    <option>Interested</option>
+                      <option>Not Interested</option>
+                </select>
+              </div>
+                <div class="col-md-12">
+                <label>Tags</label>
+                <input class="form-control" type="text">
+              </div>
+
+                    <div class="col-md-12">
+                <label>Comments</label>
+                <textarea rows="2" class="form-control" style="height:38px;"></textarea>
+              </div>
+            </div>
+          </div>
+              
+              </form>
+
+                 <h5 class="modal-title" id="H1">History</h5><br />
+
+
+
+
+              <div class="form-row">
+
+                   <div class="table-responsive">
+                        <table class="table table-bordered" id="Table1" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>Date Posted</th>
+                                    <th>Date of Followup</th>
+                                     <th>Status</th>
+                                    <th>Commets</th>
+                                      </thead>
+                        
+                            <tbody>
+                                
+                                
+                              <tr>
+
+
+ <td>30-11-2017</td>
+ <td>28-11-2017</td>
+                                   <td>Opened</td>
+                                   <td>Interested</td>
+
+
+
+                                  </tr>
+
+                                <tr>
+                                  <td>30-11-2017</td>
+ <td>28-11-2017</td>
+                                   <td>Opened</td>
+                                   <td>Interested</td>
+
+                                </tr>
+                                    </table>
+
+
+
+            </div>
+              </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Save</a>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Page level plugin JavaScript-->
+        <script src="vendor/chart.js/Chart.min.js"></script>
+        <script src="vendor/datatables/jquery.dataTables.js"></script>
+        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin.min.js"></script>
+        <!-- Custom scripts for this page-->
+        <script src="js/sb-admin-datatables.min.js"></script>
+        <script src="js/sb-admin-charts.min.js"></script>
+    </div>
+</body>
+
+</html>
